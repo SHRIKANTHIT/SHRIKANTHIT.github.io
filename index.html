@@ -3,56 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT Support | Senior System Administrator</title>
+    <title>Shrikanth IT Solutions | Enterprise System Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        header { background: #004d99; color: white; padding: 2rem 0; text-align: center; }
-        .container { width: 80%; margin: auto; max-width: 800px; padding: 20px; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { color: #004d99; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-        .btn { display: inline-block; background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #218838; }
-        .services-list { list-style: none; padding: 0; }
-        .services-list li { background: #f4f4f4; margin: 5px 0; padding: 10px; border-left: 5px solid #004d99; }
-        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; margin-top: 40px; border-top: 1px solid #eee; }
+        :root {
+            --primary: #0f172a; /* Server Room Dark Blue */
+            --accent: #0ea5e9; /* Tech Blue */
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --success: #22c55e;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #334155; background: #f1f5f9; }
+        
+        /* Navigation */
+        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        .contact-btn { background: var(--accent); color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .contact-btn:hover { background: #0284c7; }
+
+        /* Hero Section */
+        header { 
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 5% 6rem;
+            text-align: center;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
+        header p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem; }
+        .badge { background: rgba(14, 165, 233, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--accent); display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+
+        /* Stats Bar */
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Services Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
+        .section-title { text-align: center; margin-bottom: 4rem; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid transparent; }
+        .card:hover { transform: translateY(-5px); border-top: 4px solid var(--accent); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
+        .card ul { list-style: none; margin-top: 1rem; }
+        .card li { margin-bottom: 0.5rem; color: #64748b; font-size: 0.95rem; }
+        .card li::before { content: "✓"; color: var(--success); margin-right: 10px; font-weight: bold; }
+
+        /* CTA Section */
+        .cta-section { background: var(--dark); color: white; text-align: center; padding: 5rem 2rem; }
+        .button-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 100; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.05); background: #20bd5a; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 1px solid #334155; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .stats { gap: 1.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-<header>
+    <nav>
+        <div class="logo">Shrikanth<span>IT</span></div>
+        <a href="https://wa.me/917406000477" class="contact-btn"><i class="fa-brands fa-whatsapp"></i> Hire Me</a>
+    </nav>
+
+    <header>
+        <span class="badge">Available for Projects</span>
+        <h1>Senior System & Network Administrator</h1>
+        <p>Enterprise-grade IT Infrastructure Support, Server Management, and Advanced Troubleshooting. Bringing 7.5 years of corporate experience to your business.</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">7.5+</span>
+                <span class="stat-label">Years Exp</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Bengaluru</span>
+                <span class="stat-label">Based In</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Critical Support</span>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Shrikanth IT Support</h1>
-        <p>Senior System & Network Administrator (7.5+ Years Exp.)</p>
-        <p>Freelance IT Services in Bengaluru & Remote</p>
+        <div class="section-title">
+            <h2>Specialized Services</h2>
+            <p>Professional solutions for complex IT environments.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-server"></i></div>
+                <h3>Server Administration</h3>
+                <p>Complete management of Windows Server & Linux environments.</p>
+                <ul>
+                    <li>Active Directory & Group Policy</li>
+                    <li>DNS/DHCP Configuration</li>
+                    <li>Virtualization (VMware/Hyper-V)</li>
+                    <li>Backup & Disaster Recovery</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>Network Security</h3>
+                <p>Securing your infrastructure against modern threats.</p>
+                <ul>
+                    <li>Firewall Config (Sophos/Fortinet)</li>
+                    <li>VPN Setup (Site-to-Site/Remote)</li>
+                    <li>VLAN & Switch Management</li>
+                    <li>Wi-Fi Enterprise Solutions</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-laptop-medical"></i></div>
+                <h3>Endpoint Support</h3>
+                <p>Advanced hardware and software troubleshooting.</p>
+                <ul>
+                    <li>L3 Laptop Chip-Level Repair</li>
+                    <li>Data Recovery Services</li>
+                    <li>OS Optimization & Patching</li>
+                    <li>Office 365 Migration</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</header>
 
-<div class="container">
-    <section>
-        <h2>About Me</h2>
-        <p>Professional IT infrastructure support for businesses and individuals. Specializing in Windows/Linux Server management, Network Security, and Hardware troubleshooting. I bring corporate-grade reliability to freelance projects.</p>
-    </section>
+    <div class="cta-section" id="contact">
+        <h2>Ready to secure your infrastructure?</h2>
+        <p style="color: #94a3b8; margin-bottom: 2rem;">Available for freelance projects, AMC contracts, and emergency support in Bengaluru.</p>
+        
+        <div class="button-group">
+            <a href="https://wa.me/917406000477" class="contact-btn" style="background: #25D366; font-size: 1.2rem;">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="mailto:shrikanthcwork@gmail.com" class="contact-btn" style="background: #334155; font-size: 1.2rem;">
+                <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Services</h2>
-        <ul class="services-list">
-            <li><strong>Server Administration:</strong> Windows Server, Active Directory, Linux (Ubuntu/CentOS).</li>
-            <li><strong>Network Security:</strong> Firewall configuration (Sophos/Fortinet), VPN Setup, Router config.</li>
-            <li><strong>Desktop Support:</strong> Hardware troubleshooting, OS Installation, Virus Removal, Data Recovery.</li>
-            <li><strong>Cloud Services:</strong> Office 365 migration, Google Workspace setup, AWS/Azure basics.</li>
-        </ul>
-    </section>
+    <a href="https://wa.me/917406000477" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+        <span>Need Support?</span>
+    </a>
 
-    <section style="text-align: center; margin-top: 30px;">
-        <h2>Need Immediate Support?</h2>
-        <p>Available for on-site visits in Bengaluru or remote support worldwide.</p>
-        <a href="#" class="btn">Contact via WhatsApp</a>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2026 Shrikanth IT Support. Hosted securely on GitHub Pages.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Shrikanth IT Solutions.<br>
+        <a href="mailto:shrikanthcwork@gmail.com">shrikanthcwork@gmail.com</a> | +91 74060 00477</p>
+    </footer>
 
 </body>
 </html>
