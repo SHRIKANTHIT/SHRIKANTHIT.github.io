@@ -3,225 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT | Next-Gen Infrastructure</title>
+    <title>Shrikanth IT | High-End Infrastructure</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg: #030712; /* Deep Space Black */
-            --card-bg: rgba(17, 24, 39, 0.7);
-            --accent: #3b82f6; /* Electric Blue */
-            --accent-glow: rgba(59, 130, 246, 0.5);
+            --bg: #030712; 
+            --card-bg: #111827;
+            --accent: #3b82f6; 
             --text-main: #f3f4f6;
             --text-dim: #9ca3af;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
-            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Animated Background Mesh */
+        /* Tech Mesh Background */
         .mesh {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.1) 0%, transparent 40%);
+            background: radial-gradient(circle at 50% -20%, #1e3a8a 0%, transparent 50%);
             z-index: -1;
         }
 
         nav { 
-            padding: 1.5rem 5%; 
+            padding: 1.2rem 5%; 
             display: flex; justify-content: space-between; align-items: center; 
-            background: rgba(3, 7, 18, 0.8);
-            backdrop-filter: blur(12px);
+            background: rgba(3, 7, 18, 0.9);
             position: sticky; top: 0; z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid #1f2937;
         }
-        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
-        .logo span { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
+        .logo { font-size: 1.4rem; font-weight: 800; }
+        .logo span { color: var(--accent); }
         
         .hire-btn { 
-            background: linear-gradient(135deg, var(--accent), #1d4ed8);
-            color: white; padding: 0.7rem 1.8rem; border-radius: 8px; 
-            text-decoration: none; font-weight: 700; font-size: 0.9rem;
-            box-shadow: 0 4px 15px var(--accent-glow);
-            transition: 0.3s ease;
-        }
-        .hire-btn:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--accent); }
-
-        header { 
-            padding: 10rem 5% 6rem; text-align: center; position: relative;
-        }
-        header h1 { 
-            font-size: clamp(2.5rem, 6vw, 4.5rem); 
-            line-height: 1; font-weight: 900; letter-spacing: -2px;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to bottom, #ffffff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        header p { font-size: 1.25rem; color: var(--text-dim); max-width: 700px; margin: 0 auto 3rem; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 5% 10rem; }
-        
-        /* Grid Layout */
-        .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; }
-        
-        .card { 
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 3rem; border-radius: 24px;
-            grid-column: span 6;
-            transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative; overflow: hidden;
-        }
-        .card:hover { 
-            border-color: var(--accent);
-            transform: translateY(-10px);
-            background: rgba(17, 24, 39, 0.9);
-        }
-        .card::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.1), transparent 50%);
-            opacity: 0; transition: 0.4s;
-        }
-        .card:hover::before { opacity: 1; }
-
-        .icon-box { 
-            width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); 
-            border-radius: 12px; display: flex; align-items: center; justify-content: center; 
-            margin-bottom: 2rem; border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-        .icon-box i { font-size: 1.5rem; color: var(--accent); }
-
-        .card h3 { font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700; color: #fff; }
-        .card p { color: var(--text-dim); margin-bottom: 2rem; }
-        
-        .card ul { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
-        .card li { display: flex; align-items: center; font-size: 0.95rem; color: #d1d5db; }
-        .card li i { color: var(--accent); margin-right: 12px; font-size: 0.8rem; }
-
-        /* Section for small screens */
-        @media (max-width: 1024px) { .card { grid-column: span 12; } }
-
-        .cta-section { 
-            text-align: center; padding: 8rem 5%; 
-            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-        }
-        .cta-section h2 { font-size: 3rem; font-weight: 800; margin-bottom: 2rem; }
-
-        .whatsapp-btn { 
-            display: inline-flex; align-items: center; gap: 12px;
-            background: #ffffff; color: #000; padding: 1.2rem 2.5rem; 
-            border-radius: 12px; text-decoration: none; font-weight: 800;
+            background: var(--accent);
+            color: white; padding: 0.6rem 1.5rem; border-radius: 4px; 
+            text-decoration: none; font-weight: 700; font-size: 0.85rem;
             transition: 0.3s;
         }
-        .whatsapp-btn:hover { background: var(--accent); color: #fff; transform: scale(1.05); }
+        .hire-btn:hover { background: #2563eb; }
 
-        footer { 
-            padding: 5rem 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-dim); font-size: 0.9rem;
+        header { 
+            padding: 8rem 5% 5rem; text-align: center; 
         }
-        footer strong { color: #fff; }
-
-        /* Floating Animation */
-        @keyframes float { 
-            0% { transform: translateY(0px); } 
-            50% { transform: translateY(-10px); } 
-            100% { transform: translateY(0px); } 
+        header h1 { 
+            font-size: 3.5rem; 
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
-        .float-anim { animation: float 4s ease-in-out infinite; }
+        header p { font-size: 1.2rem; color: var(--text-dim); max-width: 800px; margin: 0 auto 2rem; }
 
-    </style>
-</head>
-<body>
-
-    <div class="mesh"></div>
-
-    <nav>
-        <div class="logo">SHRIKANTH<span>.IT</span></div>
-        <a href="https://wa.me/917406000477" class="hire-btn">HIRE ME</a>
-    </nav>
-
-    <header>
-        <div class="float-anim">
-            <span style="border: 1px solid var(--accent); color: var(--accent); padding: 5px 15px; border-radius: 50px; font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">SYSTEM ARCHITECT</span>
-        </div>
-        <h1>Infrastructure<br>Reimagined.</h1>
-        <p>Providing high-tier technical management for Schools, Colleges, and Offices. 7.5 years of experience building secure, scalable environments.</p>
-    </header>
-
-    <div class="container">
-        <div class="grid">
-            
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                <h3>Campus Infrastructure</h3>
-                <p>Deploying robust server environments and multi-lab networking for educational institutions.</p>
-                <ul>
-                    <li><i class="fa-solid fa-chevron-right"></i> Central Server Administration</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Departmental Lab Architecture</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Secure User Directory (AD/LDAP)</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Automated Campus Backups</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>Security & Connectivity</h3>
-                <p>Establishing impenetrable firewalls and high-speed Wi-Fi across large-scale facilities.</p>
-                <ul>
-                    <li><i class="fa-solid fa-chevron-right"></i> Enterprise Firewall (Sophos/Fortinet)</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Campus-wide Managed Wi-Fi</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Site-to-Site VPN Tunneling</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Content Filtering & Safety</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-terminal"></i></div>
-                <h3>Remote Ops & Support</h3>
-                <p>Precision troubleshooting and hardware lifecycle management for staff and offices.</p>
-                <ul>
-                    <li><i class="fa-solid fa-chevron-right"></i> L3 Remote Incident Response</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Hardware Performance Tuning</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Monthly Maintenance Audits</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Multi-vendor Asset Management</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
-                <h3>Open Source Integration</h3>
-                <p>Leveraging high-quality free software to reduce institutional licensing costs by up to 60%.</p>
-                <ul>
-                    <li><i class="fa-solid fa-chevron-right"></i> Linux Lab Environments</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Open Office Deployments</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Free Learning Tool Sets</li>
-                    <li><i class="fa-solid fa-chevron-right"></i> Secure Open Mail Servers</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cta-section">
-        <h2>Start the Transformation.</h2>
-        <a href="https://wa.me/917406000477" class="whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i> CONNECT ON WHATSAPP
-        </a>
-    </div>
-
-    <footer>
-        <p><strong>SHRIKANTH IT SOLUTIONS</strong></p>
-        <p>Bengaluru, India | 7.5+ Years Expertise</p>
-        <p style="margin-top: 10px;">shrikanthcwork@gmail.com | +91 74060 00477</p>
-    </footer>
-
-</body>
-</html>
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5% 8rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1
