@@ -7,170 +7,57 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a; 
-            --accent: #3b82f6; 
-            --success: #16a34a;
+            --primary: #0f172a; 
+            --accent: #2563eb; 
+            --success: #10b981;
             --bg: #ffffff;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #334155; background: var(--bg); }
         
-        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+        nav { background: white; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
         .logo span { color: var(--accent); }
-        .contact-btn { background: var(--accent); color: white; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
-        .contact-btn:hover { background: var(--primary); }
+        
+        .contact-btn { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+        .contact-btn:hover { background: var(--primary); transform: translateY(-2px); }
 
+        /* ADVANCED CLEAN HERO - Tech Mesh on White */
         header { 
-            background: #0f172a;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0, transparent 50%),
-                linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8));
-            color: white;
+            background: #ffffff;
+            position: relative;
             padding: 8rem 5% 6rem;
             text-align: center;
-            border-bottom: 5px solid var(--accent);
+            overflow: hidden;
+            border-bottom: 1px solid #f1f5f9;
         }
-        header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
-        header p { font-size: 1.25rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 2.5rem; }
         
+        /* Subtle Technical Background Pattern */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+            opacity: 0.5;
+        }
+
+        header h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.1; font-weight: 800; color: var(--primary); position: relative; z-index: 2; letter-spacing: -1px; }
+        header p { font-size: 1.3rem; color: #64748b; max-width: 800px; margin: 0 auto 2.5rem; position: relative; z-index: 2; font-weight: 400; }
+        
+        .badge { background: #eff6ff; color: var(--accent); padding: 0.5rem 1.2rem; border-radius: 4px; display: inline-block; margin-bottom: 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; position: relative; z-index: 2; border: 1px solid #dbeafe; }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
         
+        @media (min-width: 900px) {
+            .card-wide { grid-column: span 2; } 
+        }
+
         .card { 
             background: white; 
-            padding: 2.5rem; 
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: 0.3s ease;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        
-        .card-wide { grid-column: span 2; }
-        @media (max-width: 900px) { .card-wide { grid-column: span 1; } }
-
-        .icon-box { width: 55px; height: 55px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
-        .icon-box i { font-size: 1.5rem; color: var(--accent); }
-        
-        .card h3 { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--primary); font-weight: 700; }
-        .card ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-        @media (max-width: 600px) { .card ul { grid-template-columns: 1fr; } }
-        
-        .card li { font-size: 0.95rem; display: flex; align-items: center; color: #475569; }
-        .card li i { color: var(--success); margin-right: 10px; font-size: 0.8rem; }
-        
-        .target-section { text-align: center; margin-bottom: 4rem; }
-        .target-section h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem; }
-        .target-tags { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 1rem; }
-        .tag { background: #f1f5f9; color: #475569; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
-
-        .cta-section { text-align: center; padding: 6rem 2rem; background: #f8fafc; border-top: 1px solid #e2e8f0; }
-        
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 14px 22px; border-radius: 50px; font-weight: 700; text-decoration: none; z-index: 100; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.05); }
-
-        footer { padding: 4rem 5%; background: white; text-align: center; color: #64748b; font-size: 0.95rem; border-top: 1px solid #f1f5f9; }
-        footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">SHRIKANTH<span>IT</span></div>
-        <a href="https://wa.me/917406000477" class="contact-btn">GET EXPERT HELP</a>
-    </nav>
-
-    <header>
-        <div style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; color: var(--accent); font-weight: 700;">7.5+ Years Technical Experience</div>
-        <h1>IT Infrastructure & Support for Modern Campuses</h1>
-        <p>Expert technology management for Schools, Colleges, and Small Offices. Providing reliable networking, server administration, and hands-on maintenance.</p>
-    </header>
-
-    <div class="container">
-        
-        <div class="target-section">
-            <h2>Specialized Solutions For:</h2>
-            <div class="target-tags">
-                <span class="tag"><i class="fa-solid fa-school"></i> Schools & Academy</span>
-                <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Degree & Tech Colleges</span>
-                <span class="tag"><i class="fa-solid fa-building"></i> Small Offices</span>
-                <span class="tag"><i class="fa-solid fa-laptop-code"></i> Computer Labs</span>
-            </div>
-        </div>
-
-        <div class="grid">
-            
-            <div class="card card-wide">
-                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
-                <h3>Campus & Office Infrastructure</h3>
-                <p>Establishing solid digital foundations for your entire institution or office space.</p>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Windows/Linux Server Setup</li>
-                    <li><i class="fa-solid fa-check"></i> Departmental Lab Networking</li>
-                    <li><i class="fa-solid fa-check"></i> Centralized User Management</li>
-                    <li><i class="fa-solid fa-check"></i> Reliable Backup Systems</li>
-                    <li><i class="fa-solid fa-check"></i> Campus-wide WiFi Coverage</li>
-                    <li><i class="fa-solid fa-check"></i> Firewall & Internet Safety</li>
-                </ul>
-            </div>
-
-            <div class="card card-wide">
-                <div class="icon-box"><i class="fa-solid fa-tools"></i></div>
-                <h3>Maintenance & Support Services</h3>
-                <p>Ongoing care to ensure staff and students never face downtime.</p>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Remote Desktop Support</li>
-                    <li><i class="fa-solid fa-check"></i> Regular On-site Lab Audits</li>
-                    <li><i class="fa-solid fa-check"></i> Speed Upgrades (SSD/RAM)</li>
-                    <li><i class="fa-solid fa-check"></i> Printer & Projector Support</li>
-                    <li><i class="fa-solid fa-check"></i> Antivirus & Security Updates</li>
-                    <li><i class="fa-solid fa-check"></i> Outlook & Mail Troubleshooting</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
-                <h3>Cost-Saving Software</h3>
-                <p>Providing high-quality Open Source alternatives to save on license costs.</p>
-                <ul style="grid-template-columns: 1fr;">
-                    <li><i class="fa-solid fa-check"></i> Free OS (Ubuntu/Linux)</li>
-                    <li><i class="fa-solid fa-check"></i> LibreOffice for Student Labs</li>
-                    <li><i class="fa-solid fa-check"></i> Open Source Email Solutions</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                <h3>Hardware Procurement</h3>
-                <p>Expert advice and installation for all your IT hardware needs.</p>
-                <ul style="grid-template-columns: 1fr;">
-                    <li><i class="fa-solid fa-check"></i> PC & Laptop Configuration</li>
-                    <li><i class="fa-solid fa-check"></i> Network Switch Deployment</li>
-                    <li><i class="fa-solid fa-check"></i> Component Level Replacements</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cta-section">
-        <h2>Professional IT Care for Your Institution</h2>
-        <p style="color: #64748b; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether it is a single office or a full campus network, I provide the technical expertise to keep you online.</p>
-        <a href="mailto:shrikanthcwork@gmail.com" class="contact-btn" style="padding: 1.2rem 3.5rem; font-size: 1.1rem; border-radius: 4px;">EMAIL ME NOW</a>
-    </div>
-
-    <a href="https://wa.me/917406000477" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
-        <span>SUPPORT CHAT</span>
-    </a>
-
-    <footer>
-        <p><strong>SHRIKANTH IT SOLUTIONS</strong><br>
-        Specialist for Educational Institutions & Small Offices<br>
-        Bengaluru, KA | <a href="mailto:shrikanthcwork@gmail.com">shrikanthcwork@gmail.com</a> | +91 74060 00477</p>
-    </footer>
-
-</body>
-</html>
+            padding: 3rem; 
+            border-radius: 8px; 
+            border: 1px solid #f1f5f
