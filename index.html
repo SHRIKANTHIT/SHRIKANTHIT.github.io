@@ -36,4 +36,118 @@
         header p { font-size: 1.25rem; color: #dbeafe; max-width: 850px; margin: 0 auto; }
         .freelance-badge { display: inline-block; background: rgba(255, 255, 255, 0.2); color: #ffffff; padding: 5px 15px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 1.5px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.4); }
 
-        .container
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5% 6rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+        
+        .card { background: var(--bg-card); border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 12px; transition: 0.3s ease; }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); }
+        
+        .icon-box { width: 50px; height: 50px; background: #eff6ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        .icon-box i { font-size: 1.4rem; color: var(--accent); }
+        
+        .card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; color: var(--primary); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        .card ul { list-style: none; margin-top: 15px; }
+        .card li { display: flex; align-items: start; font-size: 0.95rem; color: var(--text-body); margin-bottom: 0.8rem; }
+        .card li i { color: var(--success); margin-right: 12px; margin-top: 5px; font-size: 0.9rem; }
+
+        /* BLUE CTA SECTION */
+        .cta-section { 
+            text-align: center; 
+            padding: 5rem 5%; 
+            background: #1e40af; 
+            color: white; 
+            border-radius: 20px; 
+            margin: 2rem auto;
+            max-width: 1100px;
+        }
+        .cta-section h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #fff; }
+        .whatsapp-btn { display: inline-block; background: #25D366; color: #fff; padding: 1.1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s; margin-top: 1.5rem; }
+        .whatsapp-btn:hover { transform: scale(1.05); }
+
+        footer { padding: 4rem 5%; text-align: center; border-top: 2px solid #e2e8f0; background: white; color: var(--text-body); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SHRIKANTH<span>.IT</span></div>
+        <a href="https://wa.me/917406000477" class="hire-btn">HIRE ME</a>
+    </nav>
+
+    <header>
+        <div class="freelance-badge">SENIOR FREELANCE IT SPECIALIST</div>
+        <h1>Campus & Office IT Solutions</h1>
+        <p>Expert <strong>Freelance Support</strong> for Colleges, Schools, and Offices. 7.5+ years of experience in high-end networking, security, and infrastructure management in Bengaluru.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>Networking & Security</h3>
+                <p>Complete management of campus and office connectivity hardware.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Firewall:</strong> Sophos & Fortinet Security Deployment.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>WiFi:</strong> High-speed Enterprise WiFi (Access Points).</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Switching:</strong> L2/L3 Network Switch Configuration.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>CCTV:</strong> Network IP Camera & NVR Integration.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Network:</strong> Structured Cabling & Rack Dressing.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                <h3>Remote & Endpoint Support</h3>
+                <p>Ensuring 100% uptime for staff and student workstations.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Remote Support:</strong> Fast troubleshooting via AnyDesk/TeamViewer.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Software:</strong> Antivirus & Endpoint (EDR) Deployment.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Office 365:</strong> Professional Outlook & Cloud Management.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Printers:</strong> Wireless Shared Printer & Scanner Setup.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Upgrades:</strong> SSD & RAM performance tuning for old PCs.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
+                <h3>Open Source Solutions</h3>
+                <p>Advanced free tools to track assets and reduce costs.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>GLPI Asset:</strong> Inventory tracking & Helpdesk ticketing.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Snipe-IT:</strong> Hardware and license asset management.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Linux:</strong> Ubuntu/Mint deployment for computer labs.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>LibreOffice:</strong> Professional free MS Office alternatives.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-server"></i></div>
+                <h3>Server Administration</h3>
+                <p>Robust backend infrastructure for institutional stability.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Windows/Linux:</strong> Full Server installation & Admin.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Directory:</strong> Active Directory & Group Policy (GPO).</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Virtualization:</strong> VMware & Hyper-V Management.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Data Protection:</strong> Automated Cloud & Local Backups.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+            <h2>Work with an Expert Freelancer</h2>
+            <p>Direct communication, faster response, and transparent pricing.</p>
+            <a href="https://wa.me/917406000477" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>SHRIKANTH IT SOLUTIONS</strong></p>
+        <p>Bengaluru, India | shrikanthcwork@gmail.com | +91 74060 00477</p>
+    </footer>
+
+</body>
+</html>
