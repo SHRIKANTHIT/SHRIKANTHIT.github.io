@@ -6,130 +6,93 @@
     <title>Shrikanth IT | Senior Freelance IT Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --bg-main: #f1f5f9; 
-            --bg-card: #ffffff;
-            --primary: #1e293b; 
-            --accent: #2563eb; 
-            --text-head: #0f172a;
-            --text-body: #475569;
-            --success: #10b981;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-main); color: var(--text-body); line-height: 1.6; }
-        
-        nav { padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #e2e8f0; }
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
-        .logo span { color: var(--accent); }
-        .hire-btn { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
-
-        header { padding: 8rem 5% 6rem; text-align: center; background: linear-gradient(to bottom, #ffffff, var(--bg-main)); border-bottom: 1px solid #e2e8f0; }
-        header h1 { font-size: 3.2rem; font-weight: 900; color: var(--text-head); margin-bottom: 1rem; letter-spacing: -1.5px; }
-        header p { font-size: 1.25rem; color: var(--text-body); max-width: 850px; margin: 0 auto; }
-        .freelance-badge { display: inline-block; background: #dbeafe; color: var(--accent); padding: 5px 15px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 1rem; }
-
-        .container { max-width: 1240px; margin: 0 auto; padding: 4rem 5% 8rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
-        
-        .card { background: var(--bg-card); border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 12px; transition: 0.3s ease; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        
-        .icon-box { width: 50px; height: 50px; background: #eff6ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
-        .icon-box i { font-size: 1.4rem; color: var(--accent); }
-        
-        .card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; color: var(--text-head); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
-        .card ul { list-style: none; margin-top: 15px; }
-        .card li { display: flex; align-items: start; font-size: 0.95rem; color: var(--text-body); margin-bottom: 0.8rem; }
-        .card li i { color: var(--success); margin-right: 12px; margin-top: 5px; font-size: 0.9rem; }
-
-        .cta-section { text-align: center; padding: 6rem 5%; background: var(--primary); color: white; border-radius: 20px; margin-bottom: 5rem; }
-        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .whatsapp-btn { display: inline-block; background: #25D366; color: #fff; padding: 1.1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s; margin-top: 1.5rem; }
-        .whatsapp-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
-
-        footer { padding: 4rem 5%; text-align: center; border-top: 2px solid #e2e8f0; background: white; }
-        
-        @media (max-width: 768px) { header h1 { font-size: 2.2rem; } }
+        body { font-family: sans-serif; margin: 0; background: #f1f5f9; color: #334155; }
+        nav { background: #fff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; }
+        .logo { font-size: 24px; font-weight: bold; color: #1e293b; }
+        .logo span { color: #2563eb; }
+        header { padding: 80px 5%; text-align: center; background: #fff; border-bottom: 1px solid #e2e8f0; }
+        header h1 { font-size: 40px; color: #0f172a; margin: 10px 0; }
+        .badge { background: #dbeafe; color: #2563eb; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 12px; }
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .card h3 { color: #0f172a; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 0; }
+        .card ul { list-style: none; padding: 0; }
+        .card li { margin: 10px 0; display: flex; align-items: center; font-size: 15px; }
+        .card li i { color: #10b981; margin-right: 10px; }
+        .cta { text-align: center; background: #1e293b; color: #fff; padding: 50px; border-radius: 20px; margin: 40px 0; }
+        .wa-btn { background: #25D366; color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        footer { text-align: center; padding: 40px; color: #64748b; font-size: 14px; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">SHRIKANTH<span>.IT</span></div>
-        <a href="https://wa.me/917406000477" class="hire-btn">HIRE ME</a>
+        <a href="https://wa.me/917406000477" style="text-decoration: none; color: #2563eb; font-weight: bold;">HIRE ME</a>
     </nav>
 
     <header>
-        <div class="freelance-badge">SENIOR FREELANCE IT SPECIALIST</div>
+        <span class="badge">SENIOR FREELANCE IT SPECIALIST</span>
         <h1>Campus & Office IT Solutions</h1>
-        <p>Providing independent <strong>Freelance Support</strong> for Colleges, Schools, and Small Offices. 7.5+ years of expertise in Bengaluru building secure and reliable infrastructure.</p>
+        <p>7.5+ Years Experience | Dedicated Freelance Support for Schools, Colleges, and Small Offices in Bengaluru.</p>
     </header>
 
     <div class="container">
         <div class="grid">
             
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
                 <h3>Schools & Colleges</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lab Management:</strong> Full monitoring and lab networking setup.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Student Tools:</strong> Installation of learning apps and software.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Exam Readiness:</strong> Preparing systems for online board exams.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Campus WiFi:</strong> High-speed internet across classrooms.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Safety:</strong> Content filtering to protect students online.</li>
+                    <li><i class="fa-solid fa-check"></i> Lab Management & Monitoring</li>
+                    <li><i class="fa-solid fa-check"></i> Student Tools & Software Setup</li>
+                    <li><i class="fa-solid fa-check"></i> Online Exam Readiness</li>
+                    <li><i class="fa-solid fa-check"></i> Campus WiFi & Web Filtering</li>
                 </ul>
             </div>
 
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-building"></i></div>
                 <h3>Small Office Support</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Office 365:</strong> Professional email and Outlook setup.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>CCTV Integration:</strong> Networked security camera monitoring.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Printers & Scanners:</strong> Wireless shared office printing.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Work from Home:</strong> Secure VPN access for employees.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Data Security:</strong> Automated daily backups for office files.</li>
+                    <li><i class="fa-solid fa-check"></i> Office 365 & Outlook Setup</li>
+                    <li><i class="fa-solid fa-check"></i> CCTV Network Integration</li>
+                    <li><i class="fa-solid fa-check"></i> Printers & Scanners Networking</li>
+                    <li><i class="fa-solid fa-check"></i> Secure Work-From-Home VPN</li>
                 </ul>
             </div>
 
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-server"></i></div>
-                <h3>Server & Networking</h3>
+                <h3>Infrastructure</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Servers:</strong> Windows and Linux Administration.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Directory:</strong> Active Directory and Group Policy (GPO).</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Firewalls:</strong> Sophos and Fortinet security deployment.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Virtualization:</strong> VMware and Hyper-V environment setup.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Upgrades:</strong> SSD and RAM speed boosts for old PCs.</li>
+                    <li><i class="fa-solid fa-check"></i> Win/Linux Server Administration</li>
+                    <li><i class="fa-solid fa-check"></i> Active Directory & GPO</li>
+                    <li><i class="fa-solid fa-check"></i> VMware & Hyper-V Setup</li>
+                    <li><i class="fa-solid fa-check"></i> Sophos & Fortinet Firewalls</li>
                 </ul>
             </div>
 
             <div class="card">
-                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
-                <h3>Open Source (Cost Saving)</h3>
+                <h3>Cost Saving</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Linux Migration:</strong> Reducing license costs for labs.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>LibreOffice:</strong> Free alternatives to MS Office.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Open Mail:</strong> Scalable free email server solutions.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Free Tools:</strong> Open source education & business sets.</li>
+                    <li><i class="fa-solid fa-check"></i> Linux Computer Lab Migration</li>
+                    <li><i class="fa-solid fa-check"></i> LibreOffice (Free Word/Excel)</li>
+                    <li><i class="fa-solid fa-check"></i> Free Education Tool Sets</li>
+                    <li><i class="fa-solid fa-check"></i> Open Source Mail Servers</li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="cta-section">
-            <h2>Need Direct Support?</h2>
-            <p>Skip the agency overhead. Work directly with a Senior IT Professional.</p>
-            <a href="https://wa.me/917406000477" class="whatsapp-btn">
-                <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT
-            </a>
+        <div class="cta">
+            <h2>Ready to optimize your IT?</h2>
+            <p>Work directly with a Professional Freelancer.</p>
+            <a href="https://wa.me/917406000477" class="wa-btn">CHAT ON WHATSAPP</a>
         </div>
     </div>
 
     <footer>
         <p><strong>SHRIKANTH IT SOLUTIONS</strong></p>
-        <p>Bengaluru, India | 7.5+ Years Expertise</p>
-        <p style="margin-top: 10px;">shrikanthcwork@gmail.com | +91 74060 00477</p>
+        <p>Bengaluru, India | shrikanthcwork@gmail.com | +91 74060 00477</p>
     </footer>
 
 </body>
