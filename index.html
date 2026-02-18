@@ -9,8 +9,9 @@
         :root {
             --bg-main: #f8fafc; 
             --bg-card: #ffffff;
-            --primary: #334155; /* Modern Slate Grey */
+            --primary: #1e40af; /* Royal Blue for Hero */
             --accent: #2563eb; 
+            --dark-slate: #334155; /* Slate for CTA */
             --text-head: #0f172a;
             --text-body: #475569;
             --success: #10b981;
@@ -23,18 +24,17 @@
         .logo span { color: var(--accent); }
         .hire-btn { background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
 
-        /* PROFESSIONAL GREY SLATE HERO */
+        /* ROYAL BLUE HERO */
         header { 
             padding: 8rem 5% 6rem; 
             text-align: center; 
-            background: #334155;
-            background-image: radial-gradient(circle at center, #475569 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
             color: white;
-            border-bottom: 4px solid var(--accent);
+            border-bottom: 5px solid #60a5fa;
         }
         header h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; color: #ffffff; letter-spacing: -1px; }
-        header p { font-size: 1.2rem; color: #cbd5e1; max-width: 850px; margin: 0 auto; }
-        .freelance-badge { display: inline-block; background: rgba(255, 255, 255, 0.1); color: #93c5fd; padding: 5px 15px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2); }
+        header p { font-size: 1.2rem; color: #dbeafe; max-width: 850px; margin: 0 auto; }
+        .freelance-badge { display: inline-block; background: rgba(255, 255, 255, 0.2); color: #ffffff; padding: 5px 15px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2); }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5% 8rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
@@ -48,18 +48,28 @@
         .card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; color: var(--primary); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
         .card ul { list-style: none; margin-top: 15px; }
         
-        /* Single Line Alignment Fix */
+        /* Fixed Single Line Alignment */
         .card li { 
             display: flex; 
             align-items: center; 
-            font-size: 0.92rem; 
+            font-size: 0.9rem; 
             color: var(--text-body); 
             margin-bottom: 0.8rem;
             white-space: nowrap; 
         }
         .card li i { color: var(--success); margin-right: 10px; font-size: 0.85rem; flex-shrink: 0; }
 
-        .cta-section { text-align: center; padding: 6rem 5%; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 20px; margin: 2rem 0; }
+        /* SLATE GREY CTA SECTION */
+        .cta-section { 
+            text-align: center; 
+            padding: 6rem 5%; 
+            background: var(--dark-slate); 
+            color: white;
+            border-radius: 20px; 
+            margin: 2rem 0;
+        }
+        .cta-section h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #ffffff; }
+        .cta-section p { color: #cbd5e1; }
         .whatsapp-btn { display: inline-block; background: #25D366; color: #fff; padding: 1.1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s; margin-top: 1.5rem; }
 
         footer { padding: 4rem 5%; text-align: center; border-top: 1px solid #e2e8f0; background: white; }
@@ -84,6 +94,7 @@
             <div class="card">
                 <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
                 <h3>Networking & Security</h3>
+                [Image of firewall network topology]
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> Firewall: Sophos & Fortinet Troubleshooting</li>
                     <li><i class="fa-solid fa-circle-check"></i> WiFi: Enterprise Access Point Configuration</li>
@@ -108,9 +119,10 @@
             <div class="card">
                 <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
                 <h3>Open Source Solutions</h3>
+                [Image of GLPI dashboard]
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> Asset Management: GLPI & Snipe-IT Setup</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Linux: Ubuntu OS Deployment for Labs</li>
+                    <li><i class="fa-solid fa-check"></i> Linux: Ubuntu OS Deployment for Labs</li>
                     <li><i class="fa-solid fa-circle-check"></i> Ticketing: Staff & Student Helpdesk Tools</li>
                     <li><i class="fa-solid fa-circle-check"></i> LibreOffice: Free Office Suite Training</li>
                     <li><i class="fa-solid fa-circle-check"></i> Mail: Open Source Server Configuration</li>
@@ -120,6 +132,7 @@
             <div class="card">
                 <div class="icon-box"><i class="fa-solid fa-server"></i></div>
                 <h3>Server Administration</h3>
+                [Image of active directory domain controller structure]
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> Win/Linux: Server Role Configuration</li>
                     <li><i class="fa-solid fa-circle-check"></i> Active Directory: GPO & User Permissions</li>
@@ -133,7 +146,7 @@
 
         <div class="cta-section">
             <h2>Need Direct IT Assistance?</h2>
-            <p>Direct communication and transparent pricing with a 7.5-year expert.</p>
+            <p>Skip the middleman. Work directly with a 7.5-year expert for faster results.</p>
             <a href="https://wa.me/917406000477" class="whatsapp-btn">
                 <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT
             </a>
