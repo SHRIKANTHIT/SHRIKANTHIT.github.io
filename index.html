@@ -3,118 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT | Infrastructure Solutions</title>
+    <title>Shrikanth IT | Professional Freelance Infrastructure</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --bg: #ffffff;
-            --card: #f8fafc;
+            --bg-main: #f1f5f9; /* Light Slate Blue */
+            --bg-card: #ffffff;
+            --primary: #1e293b; /* Deep Slate */
+            --accent: #2563eb; /* Cobalt Blue */
+            --text-head: #0f172a;
+            --text-body: #475569;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: #334155; line-height: 1.6; }
         
-        /* Navigation */
-        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background-color: var(--bg-main); 
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        nav { 
+            padding: 1.2rem 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            background: white;
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 2px solid #e2e8f0;
+        }
         .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
         .logo span { color: var(--accent); }
-        .btn { background: var(--accent); color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        
+        .hire-btn { 
+            background: var(--accent);
+            color: white; padding: 0.6rem 1.5rem; border-radius: 6px; 
+            text-decoration: none; font-weight: 700; font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .hire-btn:hover { background: var(--primary); }
 
-        /* Hero Section */
-        header { padding: 6rem 5%; text-align: center; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
-        header h1 { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
-        header p { font-size: 1.2rem; color: #64748b; max-width: 800px; margin: 0 auto; }
+        header { 
+            padding: 8rem 5% 6rem; text-align: center; 
+            background: linear-gradient(to bottom, #ffffff, var(--bg-main));
+        }
+        header h1 { 
+            font-size: clamp(2.2rem, 5vw, 3.5rem); 
+            font-weight: 900;
+            color: var(--text-head);
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        header p { font-size: 1.2rem; color: var(--text-body); max-width: 800px; margin: 0 auto 2rem; }
+        .freelance-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
 
-        /* Services Grid */
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border: 1px solid #e2e8f0; border-radius: 8px; transition: 0.3s; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
-        .card i { color: var(--accent); }
-        .card ul { list-style: none; margin-top: 1rem; }
-        .card li { font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
-        .card li::before { content: "✓"; color: #10b981; font-weight: bold; }
-
-        /* Contact Section */
-        .cta { text-align: center; padding: 4rem 5%; background: var(--primary); color: white; }
-        .cta h2 { margin-bottom: 1.5rem; }
-        .wa-link { background: #25D366; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; }
-
-        footer { text-align: center; padding: 2rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">SHRIKANTH<span>.IT</span></div>
-        <a href="https://wa.me/917406000477" class="btn">HIRE ME</a>
-    </nav>
-
-    <header>
-        <p style="font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">7.5+ Years Experience</p>
-        <h1>IT Infrastructure & Support</h1>
-        <p>Providing professional technology management for Schools, Colleges, and Small Offices across Bengaluru.</p>
-    </header>
-
-    <div class="container">
-        <div class="grid">
-            
-            <div class="card">
-                <h3><i class="fa-solid fa-server"></i> Server Management</h3>
-                <p>Complete setup and administration of Windows & Linux servers.</p>
-                <ul>
-                    <li>Active Directory & User Management</li>
-                    <li>Automatic Data Backups</li>
-                    <li>Virtualization (VMware/Hyper-V)</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3><i class="fa-solid fa-network-wired"></i> Network & WiFi</h3>
-                <p>Establishing secure campus-wide and office connectivity.</p>
-                <ul>
-                    <li>Firewall (Sophos/Fortinet) Setup</li>
-                    <li>Managed Campus WiFi</li>
-                    <li>Site-to-Site VPN Support</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3><i class="fa-solid fa-headset"></i> Maintenance</h3>
-                <p>Ongoing care to ensure zero downtime for your team.</p>
-                <ul>
-                    <li>Remote Tech Support (AnyDesk)</li>
-                    <li>Monthly Hardware Audits</li>
-                    <li>System Speed (SSD) Upgrades</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3><i class="fa-brands fa-linux"></i> Open Source</h3>
-                <p>Saving up to 60% on institutional software costs.</p>
-                <ul>
-                    <li>Linux Computer Lab Setup</li>
-                    <li>LibreOffice Deployment</li>
-                    <li>Free Educational Tools</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cta">
-        <h2>Ready to optimize your IT?</h2>
-        <a href="https://wa.me/917406000477" class="wa-link">
-            <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
-        </a>
-    </div>
-
-    <footer>
-        <p><strong>SHRIKANTH IT SOLUTIONS</strong></p>
-        <p>shrikanthcwork@gmail.com | +91 74060 00477</p>
-    </footer>
-
-</body>
-</html>
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5% 8rem; }
+        
+        .grid { display:
