@@ -3,97 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT | Senior Freelance IT Specialist</title>
+    <title>Shrikanth IT | Senior Freelance Infrastructure Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f1f5f9; color: #334155; }
-        nav { background: #fff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; }
-        .logo { font-size: 24px; font-weight: bold; color: #1e293b; }
-        .logo span { color: #2563eb; }
-        header { padding: 80px 5%; text-align: center; background: #fff; border-bottom: 1px solid #e2e8f0; }
-        header h1 { font-size: 40px; color: #0f172a; margin: 10px 0; }
-        .badge { background: #dbeafe; color: #2563eb; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 12px; }
-        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
-        .card h3 { color: #0f172a; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 0; }
-        .card ul { list-style: none; padding: 0; }
-        .card li { margin: 10px 0; display: flex; align-items: center; font-size: 15px; }
-        .card li i { color: #10b981; margin-right: 10px; }
-        .cta { text-align: center; background: #1e293b; color: #fff; padding: 50px; border-radius: 20px; margin: 40px 0; }
-        .wa-btn { background: #25D366; color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
-        footer { text-align: center; padding: 40px; color: #64748b; font-size: 14px; }
-    </style>
-</head>
-<body>
+        :root {
+            --bg-main: #f0f4f8; 
+            --bg-card: #ffffff;
+            --primary: #1e40af; /* Royal Blue */
+            --accent: #2563eb; /* Cobalt Blue */
+            --text-head: #1e293b;
+            --text-body: #475569;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: var(--bg-main); color: var(--text-body); line-height: 1.6; }
+        
+        nav { padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #e2e8f0; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .hire-btn { background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
+        .hire-btn:hover { background: var(--accent); }
 
-    <nav>
-        <div class="logo">SHRIKANTH<span>.IT</span></div>
-        <a href="https://wa.me/917406000477" style="text-decoration: none; color: #2563eb; font-weight: bold;">HIRE ME</a>
-    </nav>
+        /* BLUE HERO SECTION */
+        header { 
+            padding: 7rem 5% 5rem; 
+            text-align: center; 
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            border-bottom: 5px solid #60a5fa;
+        }
+        header h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; color: #ffffff; }
+        header p { font-size: 1.25rem; color: #dbeafe; max-width: 850px; margin: 0 auto; }
+        .freelance-badge { display: inline-block; background: rgba(255, 255, 255, 0.2); color: #ffffff; padding: 5px 15px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 1.5px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.4); }
 
-    <header>
-        <span class="badge">SENIOR FREELANCE IT SPECIALIST</span>
-        <h1>Campus & Office IT Solutions</h1>
-        <p>7.5+ Years Experience | Dedicated Freelance Support for Schools, Colleges, and Small Offices in Bengaluru.</p>
-    </header>
-
-    <div class="container">
-        <div class="grid">
-            
-            <div class="card">
-                <h3>Schools & Colleges</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Lab Management & Monitoring</li>
-                    <li><i class="fa-solid fa-check"></i> Student Tools & Software Setup</li>
-                    <li><i class="fa-solid fa-check"></i> Online Exam Readiness</li>
-                    <li><i class="fa-solid fa-check"></i> Campus WiFi & Web Filtering</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Small Office Support</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Office 365 & Outlook Setup</li>
-                    <li><i class="fa-solid fa-check"></i> CCTV Network Integration</li>
-                    <li><i class="fa-solid fa-check"></i> Printers & Scanners Networking</li>
-                    <li><i class="fa-solid fa-check"></i> Secure Work-From-Home VPN</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Infrastructure</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Win/Linux Server Administration</li>
-                    <li><i class="fa-solid fa-check"></i> Active Directory & GPO</li>
-                    <li><i class="fa-solid fa-check"></i> VMware & Hyper-V Setup</li>
-                    <li><i class="fa-solid fa-check"></i> Sophos & Fortinet Firewalls</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Cost Saving</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Linux Computer Lab Migration</li>
-                    <li><i class="fa-solid fa-check"></i> LibreOffice (Free Word/Excel)</li>
-                    <li><i class="fa-solid fa-check"></i> Free Education Tool Sets</li>
-                    <li><i class="fa-solid fa-check"></i> Open Source Mail Servers</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="cta">
-            <h2>Ready to optimize your IT?</h2>
-            <p>Work directly with a Professional Freelancer.</p>
-            <a href="https://wa.me/917406000477" class="wa-btn">CHAT ON WHATSAPP</a>
-        </div>
-    </div>
-
-    <footer>
-        <p><strong>SHRIKANTH IT SOLUTIONS</strong></p>
-        <p>Bengaluru, India | shrikanthcwork@gmail.com | +91 74060 00477</p>
-    </footer>
-
-</body>
-</html>
+        .container
