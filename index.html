@@ -3,68 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT | Professional Freelance Infrastructure</title>
+    <title>Shrikanth IT | Full-Service Freelance IT Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #f1f5f9; /* Light Slate Blue */
+            --bg-main: #f1f5f9; 
             --bg-card: #ffffff;
-            --primary: #1e293b; /* Deep Slate */
-            --accent: #2563eb; /* Cobalt Blue */
+            --primary: #1e293b; 
+            --accent: #2563eb; 
             --text-head: #0f172a;
             --text-body: #475569;
+            --success: #10b981;
         }
-        
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Segoe UI', Roboto, sans-serif; 
-            background-color: var(--bg-main); 
-            color: var(--text-body);
-            line-height: 1.6;
-        }
-
-        nav { 
-            padding: 1.2rem 5%; 
-            display: flex; justify-content: space-between; align-items: center; 
-            background: white;
-            position: sticky; top: 0; z-index: 1000;
-            border-bottom: 2px solid #e2e8f0;
-        }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: var(--bg-main); color: var(--text-body); line-height: 1.6; }
+        
+        nav { padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #e2e8f0; }
         .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
         .logo span { color: var(--accent); }
-        
-        .hire-btn { 
-            background: var(--accent);
-            color: white; padding: 0.6rem 1.5rem; border-radius: 6px; 
-            text-decoration: none; font-weight: 700; font-size: 0.85rem;
-            transition: 0.3s;
-        }
-        .hire-btn:hover { background: var(--primary); }
+        .hire-btn { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
 
-        header { 
-            padding: 8rem 5% 6rem; text-align: center; 
-            background: linear-gradient(to bottom, #ffffff, var(--bg-main));
-        }
-        header h1 { 
-            font-size: clamp(2.2rem, 5vw, 3.5rem); 
-            font-weight: 900;
-            color: var(--text-head);
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-        header p { font-size: 1.2rem; color: var(--text-body); max-width: 800px; margin: 0 auto 2rem; }
-        .freelance-badge {
-            display: inline-block;
-            background: #dbeafe;
-            color: var(--accent);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
+        header { padding: 6rem 5% 4rem; text-align: center; background: linear-gradient(to bottom, #ffffff, var(--bg-main)); border-bottom: 1px solid #e2e8f0; }
+        header h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-head); margin-bottom: 1rem; letter-spacing: -1px; }
+        header p { font-size: 1.2rem; color: var(--text-body); max-width: 900px; margin: 0 auto; }
+        .freelance-badge { display: inline-block; background: #dbeafe; color: var(--accent); padding: 5px 15px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 1rem; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 5% 8rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; }
         
-        .grid { display:
+        .card { background: var(--bg-card); border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 12px; transition: 0.3s ease; }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        
+        .icon-box { width: 50px; height: 50px; background: #eff6ff; border-radius
