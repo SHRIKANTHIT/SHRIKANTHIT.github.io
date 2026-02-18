@@ -79,4 +79,175 @@
         }
 
         /* Icon Circle Background */
-        .icon-box
+        .icon-box { 
+            width: 70px; 
+            height: 70px; 
+            background: var(--light); 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 1.5rem;
+            transition: 0.3s;
+        }
+        .card:hover .icon-box { background: var(--gradient); }
+        .card:hover .icon-box i { color: white; }
+        
+        .icon-box i { font-size: 1.8rem; color: var(--accent); transition: 0.3s; }
+        
+        .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary); font-weight: 700; }
+        .card p { color: #64748b; margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6; }
+        
+        /* List Styling */
+        .card ul { list-style: none; }
+        .card li { margin-bottom: 0.8rem; color: #475569; font-size: 0.95rem; display: flex; align-items: start; }
+        .card li i { color: var(--success); margin-right: 12px; margin-top: 4px; font-size: 0.9rem; }
+        
+        /* "Core Expertise" Tag */
+        .tag { position: absolute; top: 20px; right: 20px; background: #dbeafe; color: #1e40af; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+
+        /* CONTACT SECTION */
+        .cta-section { background: var(--primary); color: white; text-align: center; padding: 5rem 2rem; position: relative; overflow: hidden; }
+        .button-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 100; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.05); background: #20bd5a; }
+
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+            .card-wide { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Shrikanth<span>IT</span></div>
+        <a href="https://wa.me/917406000477" class="contact-btn"><i class="fa-brands fa-whatsapp"></i> Hire Me</a>
+    </nav>
+
+    <header>
+        <span class="badge">Freelance & Consulting</span>
+        <h1>Senior System & Network Administrator</h1>
+        <p>Reliable IT Support for Businesses and Offices. Specializing in Servers, Security, and Monthly Maintenance.</p>
+        
+        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; color: #cbd5e1; font-weight: bold;">
+            <span><i class="fa-solid fa-check-circle" style="color: var(--accent)"></i> 7.5 Years Exp</span>
+            <span><i class="fa-solid fa-location-dot" style="color: var(--accent)"></i> Bengaluru</span>
+        </div>
+    </header>
+
+    <section class="why-me">
+        <h2 style="color: var(--primary); font-size: 2rem;">Why Hire Me?</h2>
+        <p style="color: #666;">I bring 7+ years of experience with the speed of a freelancer.</p>
+        
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>Fair Pricing</h4>
+                <p>No hidden fees. Pay only for the work done or choose a simple monthly plan.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Fast Response</h4>
+                <p>Direct contact via WhatsApp. Quick Remote Support and On-Site visits in Bengaluru.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Permanent Fixes</h4>
+                <p>I don't just patch problems; I solve the root cause so it doesn't happen again.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Services</h2>
+            <p>Complete management for your office computers and network.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card card-wide">
+                <span class="tag">Core Expertise</span>
+                <div class="icon-box"><i class="fa-solid fa-server"></i></div>
+                <h3>Server Administration</h3>
+                <p>Complete management of your office servers. Whether you have a physical server in your office or a cloud server.</p>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Windows Server Setup & Config</li>
+                        <li><i class="fa-solid fa-circle-check"></i> User Management (Active Directory)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> DNS, DHCP & Network Rules</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Virtual Servers (VMware/Hyper-V)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Automated Daily Backups</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Data Recovery Planning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>Network & WiFi</h3>
+                <p>Securing your Office Wi-Fi and Internet connection.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Firewall Setup (Sophos/Fortinet)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> VPN for Remote Access</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Office Wi-Fi Optimization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
+                <h3>Open Source (Free Software)</h3>
+                <p>Save money on expensive software licenses.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Linux Installation (Ubuntu)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> LibreOffice (Free Excel/Word)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Thunderbird Email Setup</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                <h3>Support & Maintenance</h3>
+                <p>Fixing slow or broken systems quickly.</p>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Remote Support (Anydesk)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Monthly Maintenance Visits</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Outlook & Email Issues</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Windows 10/11 Upgrades</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section" id="contact">
+        <h2>Need IT help right now?</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.9;">Available for Remote Support, On-Site Visits, and Monthly Maintenance.</p>
+        
+        <div class="button-group">
+            <a href="https://wa.me/917406000477" class="contact-btn" style="background: white; color: var(--primary); font-size: 1.2rem;">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="mailto:shrikanthcwork@gmail.com" class="contact-btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); font-size: 1.2rem;">
+                <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/917406000477" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+        <span>Need Support?</span>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Shrikanth IT Solutions.<br>
+        <a href="mailto:shrikanthcwork@gmail.com" style="color: var(--accent); text-decoration: none;">shrikanthcwork@gmail.com</a> | +91 74060 00477</p>
+    </footer>
+
+</body>
+</html>
