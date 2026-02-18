@@ -7,8 +7,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a; /* Server Room Dark Blue */
-            --accent: #0ea5e9; /* Tech Blue */
+            --primary: #0f172a; 
+            --accent: #0ea5e9; 
             --light: #f8fafc;
             --dark: #1e293b;
             --success: #22c55e;
@@ -17,33 +17,27 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #334155; background: #f1f5f9; }
         
-        /* Navigation */
         nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: var(--accent); }
         .contact-btn { background: var(--accent); color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .contact-btn:hover { background: #0284c7; }
 
-        /* Hero Section */
         header { 
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0ea5e9 100%);
             color: white;
             padding: 8rem 5% 6rem;
             text-align: center;
         }
         header h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
-        header p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem; }
-        .badge { background: rgba(14, 165, 233, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--accent); display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+        header p { font-size: 1.25rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem; }
+        .badge { background: rgba(255, 255, 255, 0.1); color: #fff; padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); display: inline-block; margin-bottom: 1rem; font-weight: 600; }
 
-        /* Stats Bar */
         .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
         .stat-item { text-align: center; }
         .stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--accent); }
         .stat-label { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Services Grid */
         .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
         .section-title { text-align: center; margin-bottom: 4rem; }
         .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
@@ -57,19 +51,15 @@
         .card li { margin-bottom: 0.5rem; color: #64748b; font-size: 0.95rem; }
         .card li::before { content: "✓"; color: var(--success); margin-right: 10px; font-weight: bold; }
 
-        /* CTA Section */
         .cta-section { background: var(--dark); color: white; text-align: center; padding: 5rem 2rem; }
         .button-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         
-        /* Floating WhatsApp Button */
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 100; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
         .whatsapp-float:hover { transform: scale(1.05); background: #20bd5a; }
 
-        /* Footer */
         footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 1px solid #334155; }
         footer a { color: var(--accent); text-decoration: none; }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
             .stats { gap: 1.5rem; }
@@ -87,7 +77,7 @@
     <header>
         <span class="badge">Available for Projects</span>
         <h1>Senior System & Network Administrator</h1>
-        <p>Enterprise-grade IT Infrastructure Support, Server Management, and Advanced Troubleshooting. Bringing 7.5 years of corporate experience to your business.</p>
+        <p>Enterprise-grade IT Infrastructure Support. Specializing in Server Management, Network Security, and Corporate IT Solutions.</p>
         
         <div class="stats">
             <div class="stat-item">
@@ -108,7 +98,7 @@
     <div class="container">
         <div class="section-title">
             <h2>Specialized Services</h2>
-            <p>Professional solutions for complex IT environments.</p>
+            <p>Professional solutions for business and office environments.</p>
         </div>
 
         <div class="grid">
@@ -137,14 +127,26 @@
             </div>
 
             <div class="card">
-                <div class="icon"><i class="fa-solid fa-laptop-medical"></i></div>
-                <h3>Endpoint Support</h3>
-                <p>Advanced hardware and software troubleshooting.</p>
+                <div class="icon"><i class="fa-solid fa-desktop"></i></div>
+                <h3>Hardware & OS Support</h3>
+                <p>Advanced troubleshooting for Desktop & Laptop infrastructure.</p>
                 <ul>
-                    <li>L3 Laptop Chip-Level Repair</li>
-                    <li>Data Recovery Services</li>
-                    <li>OS Optimization & Patching</li>
-                    <li>Office 365 Migration</li>
+                    <li>SSD/RAM Upgrades & Optimization</li>
+                    <li>OS Installation & Licensing</li>
+                    <li>Outlook/Email Configuration</li>
+                    <li>Antivirus & Endpoint Security</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-linux"></i></div>
+                <h3>Open Source Solutions</h3>
+                <p>Cost-saving software alternatives for businesses.</p>
+                <ul>
+                    <li>Linux OS Migration (Ubuntu/Mint)</li>
+                    <li>LibreOffice/OpenOffice Setup</li>
+                    <li>Thunderbird Mail Configuration</li>
+                    <li>Free Graphic & Media Tools</li>
                 </ul>
             </div>
         </div>
