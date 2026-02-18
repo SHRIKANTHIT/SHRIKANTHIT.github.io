@@ -3,67 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT Solutions | Enterprise System Admin</title>
+    <title>Shrikanth IT Solutions | Senior System Admin</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a; 
-            --accent: #0ea5e9; 
-            --light: #f8fafc;
-            --dark: #1e293b;
-            --success: #22c55e;
+            --primary: #002d62; /* Deep Royal Blue */
+            --accent: #007acc; /* VS Code Blue - Very Techy */
+            --light: #f0f4f8;
+            --dark: #101820;
+            --success: #00b341;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #334155; background: #f1f5f9; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
         
-        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        nav { background: white; color: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; color: var(--primary); }
         .logo span { color: var(--accent); }
-        .contact-btn { background: var(--accent); color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .contact-btn:hover { background: #0284c7; }
+        .contact-btn { background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .contact-btn:hover { background: var(--accent); }
 
+        /* NEW HERO SECTION: Tech Pattern Background */
         header { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0ea5e9 100%);
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 30px 30px;
             color: white;
-            padding: 8rem 5% 6rem;
+            padding: 6rem 5% 4rem;
             text-align: center;
+            border-bottom: 5px solid var(--accent);
         }
-        header h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
-        header p { font-size: 1.25rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem; }
-        .badge { background: rgba(255, 255, 255, 0.1); color: #fff; padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+        header h1 { font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; font-weight: 800; }
+        header p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem; }
+        .badge { background: var(--accent); color: white; padding: 0.3rem 1rem; border-radius: 4px; display: inline-block; margin-bottom: 1rem; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
-        .stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--accent); }
-        .stat-label { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        /* NEW SECTION: Why Hire Me? */
+        .why-me { background: white; padding: 4rem 5%; text-align: center; }
+        .why-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+        .why-card { flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 1px solid #eee; border-radius: 8px; }
+        .why-card i { font-size: 2rem; color: var(--success); margin-bottom: 1rem; }
+        .why-card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--primary); }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
-        .section-title { text-align: center; margin-bottom: 4rem; }
-        .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+        
+        /* UPDATED GRID for Bigger Server Card */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         
-        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid transparent; }
-        .card:hover { transform: translateY(-5px); border-top: 4px solid var(--accent); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        /* Make Server Card Wider on Desktop */
+        @media (min-width: 768px) {
+            .card-wide { grid-column: span 2; } 
+        }
+
+        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-left: 5px solid var(--accent); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem; }
         .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
         .card ul { list-style: none; margin-top: 1rem; }
-        .card li { margin-bottom: 0.5rem; color: #64748b; font-size: 0.95rem; }
-        .card li::before { content: "✓"; color: var(--success); margin-right: 10px; font-weight: bold; }
+        .card li { margin-bottom: 0.8rem; color: #555; font-size: 1rem; display: flex; align-items: center; }
+        .card li i { color: var(--success); margin-right: 10px; font-size: 0.9rem; }
 
-        .cta-section { background: var(--dark); color: white; text-align: center; padding: 5rem 2rem; }
-        .button-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-section { background: var(--primary); color: white; text-align: center; padding: 5rem 2rem; }
+        .button-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
         
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 100; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
         .whatsapp-float:hover { transform: scale(1.05); background: #20bd5a; }
 
-        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 1px solid #334155; }
-        footer a { color: var(--accent); text-decoration: none; }
+        footer { background: #333; color: #aaa; text-align: center; padding: 2rem; font-size: 0.9rem; }
+        footer a { color: white; text-decoration: none; }
 
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
-            .stats { gap: 1.5rem; }
             .grid { grid-template-columns: 1fr; }
+            .card-wide { grid-column: span 1; } /* Reset width on mobile */
         }
     </style>
 </head>
@@ -75,106 +88,30 @@
     </nav>
 
     <header>
-        <span class="badge">Available for Projects</span>
+        <span class="badge">Freelance & Consulting</span>
         <h1>Senior System & Network Administrator</h1>
-        <p>Enterprise-grade IT Infrastructure Support. Specializing in Server Management, Network Security, and Corporate IT Solutions.</p>
+        <p>Expert IT Infrastructure Support for Businesses, SMEs, and Startups. Specializing in Server Management, Security, and Cost-Effective Solutions.</p>
         
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">7.5+</span>
-                <span class="stat-label">Years Exp</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">Bengaluru</span>
-                <span class="stat-label">Based In</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Critical Support</span>
-            </div>
+        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; color: #cbd5e1; font-weight: bold;">
+            <span><i class="fa-solid fa-check-circle" style="color: var(--accent)"></i> 7.5 Years Exp</span>
+            <span><i class="fa-solid fa-location-dot" style="color: var(--accent)"></i> Bengaluru</span>
         </div>
     </header>
 
-    <div class="container">
-        <div class="section-title">
-            <h2>Specialized Services</h2>
-            <p>Professional solutions for business and office environments.</p>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-server"></i></div>
-                <h3>Server Administration</h3>
-                <p>Complete management of Windows Server & Linux environments.</p>
-                <ul>
-                    <li>Active Directory & Group Policy</li>
-                    <li>DNS/DHCP Configuration</li>
-                    <li>Virtualization (VMware/Hyper-V)</li>
-                    <li>Backup & Disaster Recovery</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
-                <h3>Network Security</h3>
-                <p>Securing your infrastructure against modern threats.</p>
-                <ul>
-                    <li>Firewall Config (Sophos/Fortinet)</li>
-                    <li>VPN Setup (Site-to-Site/Remote)</li>
-                    <li>VLAN & Switch Management</li>
-                    <li>Wi-Fi Enterprise Solutions</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-desktop"></i></div>
-                <h3>Hardware & OS Support</h3>
-                <p>Advanced troubleshooting for Desktop & Laptop infrastructure.</p>
-                <ul>
-                    <li>SSD/RAM Upgrades & Optimization</li>
-                    <li>OS Installation & Licensing</li>
-                    <li>Outlook/Email Configuration</li>
-                    <li>Antivirus & Endpoint Security</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon"><i class="fa-brands fa-linux"></i></div>
-                <h3>Open Source Solutions</h3>
-                <p>Cost-saving software alternatives for businesses.</p>
-                <ul>
-                    <li>Linux OS Migration (Ubuntu/Mint)</li>
-                    <li>LibreOffice/OpenOffice Setup</li>
-                    <li>Thunderbird Mail Configuration</li>
-                    <li>Free Graphic & Media Tools</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="cta-section" id="contact">
-        <h2>Ready to secure your infrastructure?</h2>
-        <p style="color: #94a3b8; margin-bottom: 2rem;">Available for freelance projects, AMC contracts, and emergency support in Bengaluru.</p>
+    <section class="why-me">
+        <h2 style="color: var(--primary); font-size: 2rem;">Why Hire Me?</h2>
+        <p style="color: #666;">I bring the expertise of a large IT firm with the speed and pricing of a freelancer.</p>
         
-        <div class="button-group">
-            <a href="https://wa.me/917406000477" class="contact-btn" style="background: #25D366; font-size: 1.2rem;">
-                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            <a href="mailto:shrikanthcwork@gmail.com" class="contact-btn" style="background: #334155; font-size: 1.2rem;">
-                <i class="fa-solid fa-envelope"></i> Email Me
-            </a>
-        </div>
-    </div>
-
-    <a href="https://wa.me/917406000477" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
-        <span>Need Support?</span>
-    </a>
-
-    <footer>
-        <p>&copy; 2026 Shrikanth IT Solutions.<br>
-        <a href="mailto:shrikanthcwork@gmail.com">shrikanthcwork@gmail.com</a> | +91 74060 00477</p>
-    </footer>
-
-</body>
-</html>
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>Cost Effective</h4>
+                <p>Save 40% compared to hiring an agency. Pay only for the work done—no hidden fees.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Fast Response</h4>
+                <p>Direct contact via WhatsApp. Immediate remote support and quick on-site visits in Bengaluru.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-shield-halved"></i>
