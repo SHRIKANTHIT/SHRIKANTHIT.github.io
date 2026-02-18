@@ -20,10 +20,9 @@
         .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
         .logo span { color: var(--accent); }
         
-        .contact-btn { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+        .contact-btn { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; border: none; cursor: pointer; }
         .contact-btn:hover { background: var(--primary); transform: translateY(-2px); }
 
-        /* ADVANCED CLEAN HERO - Tech Mesh on White */
         header { 
             background: #ffffff;
             position: relative;
@@ -33,7 +32,6 @@
             border-bottom: 1px solid #f1f5f9;
         }
         
-        /* Subtle Technical Background Pattern */
         header::before {
             content: "";
             position: absolute;
@@ -49,12 +47,9 @@
         .badge { background: #eff6ff; color: var(--accent); padding: 0.5rem 1.2rem; border-radius: 4px; display: inline-block; margin-bottom: 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; position: relative; z-index: 2; border: 1px solid #dbeafe; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
         
-        @media (min-width: 900px) {
-            .card-wide { grid-column: span 2; } 
-        }
+        @media (min-width: 900px) { .card-wide { grid-column: span 2; } }
 
         .card { 
             background: white; 
@@ -119,7 +114,7 @@
     <header>
         <div class="badge">SENIOR IT INFRASTRUCTURE SPECIALIST</div>
         <h1>Support for Modern Campuses & Offices</h1>
-        <p>Expert technology management for Schools, Colleges, and Small Businesses. Providing reliable networking, server administration, and monthly maintenance.</p>
+        <p>Reliable technology management for Schools, Colleges, and Small Businesses. Providing expert networking, server administration, and monthly maintenance.</p>
         
         <div style="position: relative; z-index: 2; display: flex; justify-content: center; gap: 30px; color: #94a3b8; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; margin-top: 10px;">
             <span><i class="fa-solid fa-check"></i> 7.5+ YEARS EXP</span>
@@ -133,8 +128,7 @@
             <div class="card card-wide">
                 <div class="icon-box"><i class="fa-solid fa-server"></i></div>
                 <h3>Campus & Office Infrastructure</h3>
-                <p>Establishing digital foundations for your entire institution or office space, ensuring security and speed.</p>
-                
+                <p>Establishing digital foundations for your entire institution, ensuring high-speed connectivity and data security.</p>
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> Server Setup (Win/Linux)</li>
                     <li><i class="fa-solid fa-circle-check"></i> Lab Networking & Config</li>
@@ -148,58 +142,9 @@
             <div class="card card-wide">
                 <div class="icon-box"><i class="fa-solid fa-tools"></i></div>
                 <h3>Maintenance & Support</h3>
-                <p>Ongoing care to ensure staff, students, and employees never face technical downtime.</p>
+                <p>Ongoing care to ensure staff, students, and employees never face technical downtime during critical hours.</p>
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> Remote Tech Support</li>
                     <li><i class="fa-solid fa-circle-check"></i> Monthly Maintenance Visits</li>
                     <li><i class="fa-solid fa-circle-check"></i> Speed Upgrades (SSD/RAM)</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Printer & Projector Support</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Antivirus & Security Updates</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Mail & Outlook Fixing</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
-                <h3>Cost-Saving Software</h3>
-                <p>Professional Open Source alternatives to significantly reduce licensing costs for labs.</p>
-                <ul style="grid-template-columns: 1fr;">
-                    <li><i class="fa-solid fa-circle-check"></i> Linux OS Migration</li>
-                    <li><i class="fa-solid fa-circle-check"></i> LibreOffice Lab Setup</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Open Source Support</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
-                <h3>Networking Solutions</h3>
-                <p>Secure and optimized connectivity for offices and multi-department college campuses.</p>
-                <ul style="grid-template-columns: 1fr;">
-                    <li><i class="fa-solid fa-circle-check"></i> L3 Switch Configuration</li>
-                    <li><i class="fa-solid fa-circle-check"></i> VPN Tunneling</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Network Auditing</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cta-section" id="contact">
-        <h2>Ready to optimize your IT?</h2>
-        <p style="color: #64748b; margin-bottom: 3rem;">Contact me for a professional consultation or system audit.</p>
-        <a href="mailto:shrikanthcwork@gmail.com" class="contact-btn" style="padding: 1.2rem 4rem; border-radius: 4px;">HIRE ME</a>
-    </div>
-
-    <a href="https://wa.me/917406000477" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>DIRECT SUPPORT</span>
-    </a>
-
-    <footer>
-        <strong>SHRIKANTH IT SOLUTIONS</strong><br>
-        Specialist for Educational Institutions & Small Offices<br>
-        Bengaluru, KA | <a href="mailto:shrikanthcwork@gmail.com">shrikanthcwork@gmail.com</a> | +91 74060 00477
-    </footer>
-
-</body>
-</html>
+                    <li><i class="fa-solid fa-circle
