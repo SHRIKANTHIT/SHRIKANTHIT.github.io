@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrikanth IT | Senior Institutional Infrastructure Specialist</title>
+    <title>Shrikanth IT | Senior Infrastructure Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -73,7 +73,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
         }
         
-        /* HARD FIX FOR ICON VISIBILITY */
         .icon-box { 
             width: 60px; 
             height: 60px; 
@@ -85,12 +84,12 @@
             margin-bottom: 1.5rem; 
             border: 1px solid #dbeafe;
         }
-        .icon-box i { 
-            font-family: "Font Awesome 6 Free" !important;
-            font-weight: 900 !important;
-            font-size: 1.8rem !important; 
-            color: var(--primary) !important; 
-            font-style: normal !important;
+        /* Style for SVG and icons */
+        .icon-box i, .icon-box svg { 
+            font-size: 1.8rem; 
+            color: var(--primary); 
+            width: 30px;
+            height: 30px;
         }
         
         .card h3 { 
@@ -152,35 +151,49 @@
     </nav>
 
     <header>
-        <div class="freelance-badge">7.5+ YEARS ENGINEERING COLLEGE IT EXPERTISE</div>
+        <div class="freelance-badge">7.5+ YEARS SYSTEM & NETWORK EXPERTISE</div>
         <h1>Campus & Office IT Solutions</h1>
-        <p>Expert <strong>independent support</strong> specialized in Academic Infrastructure. 7.5+ years of experience in system and network administration for large institutions.</p>
+        <p>Specialized infrastructure management for <strong>Businesses, Enterprises, and Educational Institutions</strong>. High-end networking and security tailored for modern environments.</p>
     </header>
 
     <div class="container">
         <div class="grid">
             
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>Academic Lab Management</h3>
+                <div class="icon-box">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 1.944A11.94 11.94 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.681-.056-1.351-.166-2C14.335 3.328 12.345 2.247 10 1.944zM10 16c-3.132-1.246-5.5-4.524-5.5-8.12V7a7.94 7.94 0 005.5-2.12V16z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3>Networking & Security</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> Computer Lab Setup & Performance Tuning</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Student OS Deployment (Windows & Linux)</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Software Licensing & Asset Tracking (GLPI)</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Secure Web Filtering & Student Protection</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Networked Printer & Scanner Configuration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Firewall: Sophos & Fortinet Config & Troubleshooting</li>
+                    <li><i class="fa-solid fa-circle-check"></i> WiFi: Managed Campus & Office AP Configuration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Switching: L2/L3 VLAN Config & Troubleshooting</li>
+                    <li><i class="fa-solid fa-circle-check"></i> CCTV: Institutional IP Camera & NVR Setup</li>
+                    <li><i class="fa-solid fa-circle-check"></i> VPN: Site-to-Site & Client Tunneling Support</li>
                 </ul>
             </div>
 
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>Networking & Security</h3>
+                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                <h3>Support & Maintenance</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> Firewall: Sophos & Fortinet Configuration</li>
-                    <li><i class="fa-solid fa-circle-check"></i> WiFi: High-Density Campus AP Configuration</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Switching: L2/L3 VLAN Troubleshooting</li>
-                    <li><i class="fa-solid fa-circle-check"></i> CCTV: Institutional IP Camera & NVR Setup</li>
-                    <li><i class="fa-solid fa-circle-check"></i> VPN: Site-to-Site & Staff Connectivity</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Remote Support: Professional AnyDesk Troubleshooting</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Endpoints: Antivirus & EDR Security Management</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Office 365: Outlook & Cloud Mail Infrastructure</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Printers: Network Printer & Scanner Shared Setup</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Hardware: PC SSD Upgrades & Performance Audits</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
+                <h3>Open Source Solutions</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Asset Management: GLPI & Snipe-IT Configuration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Linux: OS Deployment for High-Performance Labs</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Ticketing: Helpdesk System Setup for Staff/Users</li>
+                    <li><i class="fa-solid fa-circle-check"></i> LibreOffice: Free Professional Suite Training</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Mail: Open Source Server Config & Management</li>
                 </ul>
             </div>
 
@@ -188,31 +201,19 @@
                 <div class="icon-box"><i class="fa-solid fa-server"></i></div>
                 <h3>Server Administration</h3>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> Win/Linux: Server Role Config & Maintenance</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Active Directory: GPO & User Permission Setup</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Virtualization: VMware & Hyper-V Management</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Backups: Institutional Data Protection</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Cloud: Office 365 & Outlook Mail Management</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
-                <h3>Expert Support</h3>
-                <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> Remote Support: AnyDesk Troubleshooting</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Endpoints: Antivirus & Security Patching</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Open Source: LibreOffice & Free Tool Migration</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Ticketing: Snipe-IT & Helpdesk System Setup</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Hardware: SSD Upgrades & Performance Audits</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Win/Linux: Server Role Config & Infrastructure</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Active Directory: GPO & User Permission Management</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Virtualization: VMware & Hyper-V Environment Setup</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Backups: Managed Institutional Data Protection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Storage: NAS & File Server Config & Monitoring</li>
                 </ul>
             </div>
 
         </div>
 
         <div class="cta-section">
-            <h2>Trusted Institutional Support</h2>
-            <p>Directly work with a specialist who understands Engineering College requirements. 7.5 years of proven results.</p>
+            <h2>Work with a Senior Expert</h2>
+            <p>Direct communication and professional results for business and education. 7.5 years of industry experience.</p>
             <a href="https://wa.me/917406000477" class="whatsapp-btn">
                 <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT NOW
             </a>
